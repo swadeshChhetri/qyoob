@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --font-hanken: "Hanken Grotesk", sans-serif;
+  --font-opensans: "Open Sans", sans-serif;
+}
+
+
+body {
+  font-family: var(--font-hanken);
+  background-color: #000; /* optional */
+  color: #fff;
+}
+
+.mask-fade {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+}
