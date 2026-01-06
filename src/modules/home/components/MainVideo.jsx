@@ -1,7 +1,7 @@
 import React from "react";
 import { CirclePlay } from "lucide-react";
 import { Link } from "react-router-dom";
-import Section from "../../layout/Section";
+import Section from "../../../components/layout/Section";
 
 export default function HeroSectionVideo() {
   return (
@@ -33,10 +33,10 @@ export default function HeroSectionVideo() {
               to="/contact"
               className="pointer-events-auto flex items-center gap-2
                          bg-lime-400 hover:bg-lime-500 text-black font-semibold
-                         px-6 sm:px-8 py-3 rounded-full transition shadow-lg"
+                         px-6 sm:px-8 py-3 rounded-xl transition shadow-lg"
             >
               <CirclePlay size={20} />
-              Request a demo
+              Request a Demo
             </Link>
           </div>
         </div>

@@ -15,10 +15,10 @@ export default function Header() {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
+    // { name: "About", path: "/about" },
     { name: "Product", path: "/Product" },
     // { name: "Plans", path: "/plans" },
-    { name: "Contact", path: "/contact" },
+    // { name: "Contact", path: "/contact" },
   ];
 
   // Scroll behavior

@@ -11,7 +11,7 @@ const useCases = [
       "Interact with a Customer Support Agent through multiple modalities to resolve issues, access product information, and deliver troubleshooting support by operating directly across enterprise systems and knowledge bases.",
     icons: [
       <Cloud key="crm" className="text-sky-400" />,
-      <Folder key="storage" className="text-green-400" />,
+      <Folder key="storage" className="text-lime-400" />,
       <Kanban key="jira" className="text-blue-400" />,
     ],
   },
@@ -44,7 +44,7 @@ const useCases = [
       "Automate data ingestion, analysis, and reporting to surface insights, visualize key metrics, and support faster decision-making without manual effort.",
     icons: [
       <Kanban key="tracking" className="text-blue-400" />,
-      <Folder key="storage" className="text-green-400" />,
+      <Folder key="storage" className="text-lime-400" />,
       <GitBranch key="code" className="text-white" />,
     ],
   },

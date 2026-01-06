@@ -12,11 +12,11 @@ export default function Services() {
     <section className="font-[var(--font-hanken)] space-y-40 mx-auto max-w-7xl px-2 ">
       <Header />
       <div className="pt-18 p-6">
-      <AgenticSection />
-      <MultimodalSection />
-      <UseCases />
-      <DataSourceImageSection />
-      <Footer />
+        <AgenticSection />
+        <MultimodalSection />
+        <UseCases />
+        <DataSourceImageSection />
+        <Footer />
       </div>
     </section>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import { Linkedin, Twitter, Github } from "lucide-react";
 import { Link } from "react-router-dom";
-import MaxWrapper from "./../layout/MaxWrapper";
+import MaxWrapper from "../layout/MaxWrapper";
 
 export default function Footer() {
   return (
@@ -113,10 +113,7 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-4">
-            <Link
-              to="/terms"
-              className="hover:text-white"
-            >
+            <Link to="/terms" className="hover:text-white">
               TERMS & CONDITIONS
             </Link>
             <span>|</span>
