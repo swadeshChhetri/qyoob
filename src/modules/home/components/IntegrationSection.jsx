@@ -1,14 +1,15 @@
-// import { integrations } from "../../../data/integrations";
-
+// import { integrations } from "../data/integrations";
 
 const IntegrationSection = () => {
   return (
     <section className="bg-black py-28">
       <div className="text-center">
+        {/* Heading */}
         <h2 className="text-4xl md:text-5xl font-semibold text-white">
           Qyoob doesn&apos;t replace your systems. It connects them.
         </h2>
 
+        {/* Subtext */}
         <p className="mx-auto mt-6 max-w-6xl text-xl leading-relaxed text-gray-400">
           Your agents plug into the tools your teams already use. Data stays
           where it is. Permissions stay intact.
@@ -16,18 +17,25 @@ const IntegrationSection = () => {
           No migrations, no duplication—just instant access across everything.
         </p>
 
-        <div className="mt-20 grid grid-cols-3 gap-8 sm:grid-cols-4 md:grid-cols-6 max-w-5xl mx-auto">
+        {/* Integrations Grid */}
+        <div className="mt-20 mx-auto grid max-w-6xl grid-cols-3 gap-8 sm:grid-cols-4 md:grid-cols-6">
           {integrations.map((item) => (
             <div
               key={item.name}
-              className="flex h-12 w-full items-center justify-center rounded-xl bg-white/5"
+              className="flex flex-col items-center justify-center gap-3 rounded-2xl bg-white/5 px-4 py-5 transition hover:bg-white/10"
             >
+              {/* Logo */}
               <img
                 src={item.logo}
                 alt={`${item.name} logo`}
-                className="h-12 w-12 object-contain opacity-80"
+                className="h-12 w-12 object-contain opacity-90"
                 loading="lazy"
               />
+
+              {/* Name */}
+              <span className="max-w-full truncate text-sm font-medium text-gray-300">
+                {item.name}
+              </span>
             </div>
           ))}
         </div>
@@ -113,29 +121,3 @@ export const integrations = [
     logo: "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/linear-icon.svg",
   },
 ];
-
-
-// const integrations = [
-//   "from-green-400 to-yellow-400",
-//   "from-pink-600 to-red-500",
-//   "from-blue-600 to-blue-800",
-//   "from-blue-500 to-indigo-700",
-//   "from-emerald-600 to-green-800",
-//   "from-red-700 to-red-900",
-
-//   "from-purple-600 to-indigo-700",
-//   "from-blue-700 to-blue-900",
-//   "from-gray-500 to-gray-700",
-//   "from-orange-700 to-amber-800",
-//   "from-teal-700 to-emerald-800",
-//   "from-blue-700 to-indigo-900",
-
-//   "from-gray-600 to-gray-800",
-//   "from-violet-700 to-purple-900",
-//   "from-indigo-800 to-blue-900",
-//   "from-blue-800 to-indigo-900",
-//   "from-blue-700 to-blue-900",
-//   "from-purple-700 to-indigo-900",
-// ];
-
-// export default IntegrationSection;
