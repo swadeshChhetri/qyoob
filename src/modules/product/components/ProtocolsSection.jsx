@@ -16,7 +16,7 @@ const ProtocolsSection = () => {
             </div>
           </div>
 
-          <p className="mt-6 text-gray-300 leading-relaxed">
+          <p className="mt-6 text-gray-400 leading-relaxed">
             MCP is an open standard for connecting AI systems to data sources
             and tools. Qyoob supports the full MCP specification, giving you
             access to a growing ecosystem of pre-built integrations.
@@ -37,7 +37,7 @@ const ProtocolsSection = () => {
             </div>
           </div>
 
-          <p className="mt-6 text-gray-300 leading-relaxed">
+          <p className="mt-6 text-gray-400 leading-relaxed">
             A2A enables autonomous collaboration between AI agents. Agents can
             discover, communicate with, and delegate to each other—creating a
             distributed network of specialized capabilities.

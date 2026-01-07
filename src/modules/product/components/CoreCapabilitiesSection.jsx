@@ -240,8 +240,8 @@ export default function CoreCapabilitiesSection() {
                 className={`flex items-center gap-2 rounded-xl px-4 py-2 text-sm transition border
                   ${
                     isActive
-                      ? "bg-lime-400/10 text-lime-400 border-lime-400 font-medium"
-                      : "bg-white/5 text-gray-400 border-transparent hover:text-gray-200 font-medium"
+                      ? "bg-lime-400/10 text-lime-400 border-lime-400 font-medium text-lg"
+                      : "bg-white/5  text-gray-600 border-transparent hover:text-gray-200 font-medium"
                   }
                 `}
               >

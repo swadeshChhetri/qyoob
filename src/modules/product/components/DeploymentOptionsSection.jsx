@@ -20,7 +20,7 @@ const DeploymentOptionsSection = () => {
               <Server className="h-6 w-6 text-white" />
             </div>
 
-            <h3 className="mt-6 text-xl font-semibold text-white">
+            <h3 className="mt-6 text-2xl font-semibold text-white">
               Self-Hosted
             </h3>
             <p className="mt-2 text-gray-400 leading-relaxed">
