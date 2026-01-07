@@ -1,16 +1,25 @@
 import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
+import Section from "../../../components/layout/Section";
+import MaxWrapper from "../../../components/layout/MaxWrapper";
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-black px-6 py-40">
-      <div className="mx-auto max-w-7xl text-center">
+    <Section className="relative bg-black px-6">
+      <MaxWrapper className="flex flex-col items-center text-center space-y-6">
         {/* Heading */}
-        <h1 className="text-5xl md:text-7xl font-semibold tracking-tight text-white">
+        <motion.h1
+          initial={{ opacity: 0, y: 28 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold text-white leading-tight"
+        >
           The Qyoob Platform
-        </h1>
+        </motion.h1>
 
         {/* Subheading */}
-        <p className="mx-auto mt-6 max-w-4xl text-xl leading-relaxed text-gray-400">
+        <p className="mx-auto max-w-4xl text-xl leading-relaxed text-gray-400">
           A multi-agent orchestration platform for building and deploying
           enterprise AI agents. Self-hosted.
           <br />
@@ -18,7 +27,7 @@ const HeroSection = () => {
         </p>
 
         {/* CTA buttons */}
-        <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <div className="flex flex-col items-center justify-center gap-4 sm:flex-row mt-2">
           {/* Primary CTA */}
           <button className="inline-flex items-center gap-2 rounded-xl bg-lime-400 px-6 py-3 text-sm font-medium text-black transition hover:bg-lime-300">
             Request a Demo
@@ -30,8 +39,8 @@ const HeroSection = () => {
             Contact Sales
           </button>
         </div>
-      </div>
-    </section>
+      </MaxWrapper>
+    </Section>
   );
 };
 

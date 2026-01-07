@@ -1,15 +1,25 @@
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M12 3l8 4.5v9l-8 4.5-8-4.5v-9l8-4.5" />
-  <path d="M12 12l8-4.5" />
-  <path d="M12 12v9" />
-  <path d="M12 12l-8-4.5" />
-  <path d="M16 5.25l-8 4.5" />
+<svg width="200" height="200" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" 
+        stroke="white" 
+        stroke-width="2" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+  
+  <polyline points="3.27 6.96 12 12.01 20.73 6.96" 
+            stroke="white" 
+            stroke-width="2" 
+            stroke-linecap="round" 
+            stroke-linejoin="round"/>
+  
+  <line x1="12" y1="22.08" x2="12" y2="12" 
+        stroke="white" 
+        stroke-width="2" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+        
+  <line x1="7.5" y1="4.5" x2="16.5" y2="9.5" 
+        stroke="white" 
+        stroke-width="2" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
 </svg>

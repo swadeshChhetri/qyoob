@@ -32,7 +32,7 @@ const SolutionSection = () => {
           <h3 className="text-2xl font-semibold text-white">
             Three ways to work with your agents
           </h3>
-          <p className="mt-2 text-gray-500">
+          <p className="mt-2 text-gray-400 text-md">
             Choose the interaction mode that fits the task at hand
           </p>
         </div>

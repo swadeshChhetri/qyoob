@@ -19,7 +19,7 @@ export default function AppRoutes() {
     <Routes>
       {/* <Route path="/" element={<Home />} /> */}
       <Route path="/" element={<Home />} />
-      {/* <Route path="/about" element={<About />} /> */}
+      <Route path="/about" element={<About />} />
       {/* <Route path="/services" element={<Services />} /> */}
       <Route path="/Product" element={<Product />} />
       {/* <Route path="/plans" element={<Plans />} /> */}

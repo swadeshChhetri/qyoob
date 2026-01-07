@@ -10,7 +10,7 @@ const GovernanceSection = () => {
         </h2>
 
         {/* Subtext */}
-        <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-gray-400">
+        <p className="mx-auto mt-6 max-w-3xl text-xl leading-relaxed text-gray-400">
           You get speed without giving up control. Every action agents take is
           visible, auditable, and governed by rules you set.
         </p>

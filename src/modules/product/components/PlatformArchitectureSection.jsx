@@ -9,7 +9,7 @@ const PlatformArchitectureSection = () => {
           <h2 className="text-4xl md:text-5xl font-semibold text-white">
             Platform Architecture
           </h2>
-          <p className="mt-4 text-gray-400">
+          <p className="mt-4 text-gray-400 text-xl">
             Built on production-grade infrastructure components
           </p>
         </div>

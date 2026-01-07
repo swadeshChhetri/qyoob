@@ -24,7 +24,7 @@ const INTEGRATIONS = [
       },
       {
         name: "Outlook",
-        logo: "https://cdn.simpleicons.org/microsoftoutlook",
+        logo: "/icons/outlook.png",
       },
       {
         name: "Slack",
@@ -32,7 +32,7 @@ const INTEGRATIONS = [
       },
       {
         name: "Microsoft Teams",
-        logo: "https://cdn.simpleicons.org/microsoftteams",
+        logo: "/icons/microsoftTeams.png",
       },
     ],
   },
@@ -45,7 +45,7 @@ const INTEGRATIONS = [
       },
       {
         name: "OneDrive",
-        logo: "https://cdn.simpleicons.org/microsoftonedrive",
+        logo: "/icons/onedrive.png",
       },
       {
         name: "Dropbox",
@@ -57,7 +57,7 @@ const INTEGRATIONS = [
       },
       {
         name: "SharePoint",
-        logo: "https://cdn.simpleicons.org/microsoftsharepoint",
+        logo: "/icons/sharepoint.png",
       },
     ],
   },
@@ -66,7 +66,7 @@ const INTEGRATIONS = [
     items: [
       {
         name: "GitHub",
-        logo: "https://cdn.simpleicons.org/github",
+        logo: "/icons/github.png",
       },
       {
         name: "GitLab",
@@ -93,7 +93,7 @@ export default function SupportedIntegrationsSection() {
           <h2 className="text-4xl md:text-5xl font-semibold text-white">
             Supported Integrations
           </h2>
-          <p className="mx-auto mt-4 max-w-3xl text-gray-400">
+          <p className="mx-auto mt-4 max-w-3xl text-gray-400 text-xl">
             Connect to the tools your teams already use. Pre-built MCP
             connectors for popular enterprise systems.
           </p>
@@ -106,7 +106,7 @@ export default function SupportedIntegrationsSection() {
               key={group.category}
               className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur"
             >
-              <h3 className="text-lg font-semibold text-white">
+              <h3 className="text-xl font-semibold text-white">
                 {group.category}
               </h3>
 
@@ -114,7 +114,7 @@ export default function SupportedIntegrationsSection() {
                 {group.items.map((item) => (
                   <div
                     key={item.name}
-                    className="flex items-center gap-2 rounded-xl bg-black/40 px-2 py-3 text-gray-300"
+                    className="flex items-center gap-2 rounded-xl bg-black/40 py-3 text-gray-300"
                   >
                     <img
                       src={item.logo}

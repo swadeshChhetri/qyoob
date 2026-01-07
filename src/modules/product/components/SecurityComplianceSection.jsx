@@ -64,7 +64,7 @@ const SecurityCard = ({ icon, title, items }) => {
         {icon}
       </div>
 
-      <h3 className="mt-6 text-lg font-semibold text-white">
+      <h3 className="mt-6 text-xl font-semibold text-white">
         {title}
       </h3>
 

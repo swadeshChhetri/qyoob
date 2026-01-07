@@ -6,13 +6,13 @@ const ProtocolsSection = () => {
         <div className="relative rounded-3xl border border-orange-500/20 bg-gradient-to-br from-orange-950/60 to-black p-10">
           <div className="flex items-center gap-4">
             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-orange-500">
-              <img src="/icons/package.svg" alt="" className="h-6 w-6" />
+              <img src="/icons/package.svg" alt="" className="h-6 w-6 te" />
             </div>
             <div>
               <h3 className="text-xl font-semibold text-white">
                 Model Context Protocol
               </h3>
-              <p className="text-sm text-orange-400">Industry Standard</p>
+              <p className="text-xs text-orange-400">Industry Standard</p>
             </div>
           </div>
 
@@ -33,7 +33,7 @@ const ProtocolsSection = () => {
               <h3 className="text-xl font-semibold text-white">
                 Agent-to-Agent Protocol
               </h3>
-              <p className="text-sm text-emerald-400">Next Generation</p>
+              <p className="text-xs text-emerald-400">Next Generation</p>
             </div>
           </div>
 

@@ -1,7 +1,7 @@
 const BenefitsSection = () => {
   return (
     <section className="bg-black px-6 py-28">
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-7xl">
         {/* Heading */}
         <h2 className="text-center text-4xl md:text-5xl font-semibold text-white">
           Three things change when you deploy Qyoob.
@@ -38,7 +38,7 @@ const BenefitsSection = () => {
 const Benefit = ({ number, title, description }) => {
   return (
     <div>
-      <span className="text-5xl font-medium text-lime-400">{number}</span>
+      <span className="text-6xl text-lime-400">{number}</span>
 
       <h3 className="mt-6 text-2xl font-semibold text-white">{title}</h3>
 
