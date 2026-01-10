@@ -6,7 +6,7 @@ const GovernanceSection = () => {
       <div className="mx-auto max-w-6xl text-center">
         {/* Heading */}
         <h2 className="text-4xl md:text-5xl font-semibold text-white">
-          Powerful automation. Complete oversight.
+          Powerful automation. Complete Supervision.
         </h2>
 
         {/* Subtext */}

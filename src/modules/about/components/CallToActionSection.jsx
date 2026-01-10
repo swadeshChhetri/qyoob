@@ -10,7 +10,8 @@ export default function CallToActionSection() {
       <MaxWrapper className="flex flex-col items-center text-center space-y-10">
         {/* ---------- HEADLINE ---------- */}
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white max-w-4xl">
-          Ready to transform your organization with AI?
+          Ready to transform your organization
+           <br /> with AI?
         </h2>
 
         {/* ---------- CTA BUTTON ---------- */}
