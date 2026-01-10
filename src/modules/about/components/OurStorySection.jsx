@@ -116,19 +116,19 @@ export default function OurStorySection() {
                           <Icon size={20} />
                         </div>
 
-                        <h4 className="text-white text-base font-semibold leading-snug">
+                        <h4 className="text-white text-lg font-semibold leading-snug">
                           {item.title}
                         </h4>
                       </div>
 
                       {/* Date */}
-                      <span className="text-sm font-medium text-gray-400">
+                      <span className="text-md font-medium text-gray-400">
                         {item.year}
                       </span>
                     </div>
 
                     {/* Description */}
-                    <p className="text-gray-400 text-sm leading-relaxed">
+                    <p className="text-gray-400 text-md leading-relaxed">
                       {item.description}
                     </p>
                   </div>
