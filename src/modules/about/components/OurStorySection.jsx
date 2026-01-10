@@ -73,11 +73,10 @@ export default function OurStorySection() {
             enterprise-grade AI platforms and generative AI solutions.
           </p>
         </div>
-
-        {/* ---------- TIMELINE ---------- */}
-        {/* <div className="relative max-w-5xl mx-auto py-16">
-          {/* Center line *
-          <div className="absolute left-1/2 top-0 h-full w-[2px] bg-lime-400/30 -translate-x-1/2" />
+        {/* ---------- TIMELINE (Dashboard Style – Fixed) ---------- */}
+        <div className="relative max-w-6xl mx-auto py-24">
+          {/* Center spine */}
+          <div className="absolute left-1/2 top-0 h-full w-[1px] bg-white/10 -translate-x-1/2" />
 
           <div className="flex flex-col gap-24">
             {storyTimeline.map((item, idx) => {
@@ -87,98 +86,67 @@ export default function OurStorySection() {
               return (
                 <motion.div
                   key={item.year}
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, x: isLeft ? -50 : 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, ease: "easeOut" }}
-                  className={`relative flex ${
+                  transition={{
+                    duration: 0.55,
+                    ease: "easeOut",
+                    delay: idx * 0.05,
+                  }}
+                  className={`relative flex items-center ${
                     isLeft ? "justify-start" : "justify-end"
                   }`}
                 >
-                  {/* Content Card *
-                  <div className="w-full md:w-[45%] bg-black border border-white/10 rounded-2xl p-6">
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="w-12 h-12 rounded-full border-4 border-lime-400 flex items-center justify-center text-lime-400">
-                        <Icon size={22} />
+                  {/* Card */}
+                  <div
+                    className={`
+              relative
+              w-full md:w-[48%]
+              bg-black
+              border border-white/10
+              rounded-xl
+              px-6 py-5
+            `}
+                  >
+                    {/* Header */}
+                    <div className="flex items-start justify-between mb-3">
+                      <div className="flex items-start gap-3">
+                        <div className="w-10 h-10 rounded-md bg-lime-400/10 border border-lime-400/30 flex items-center justify-center text-lime-400">
+                          <Icon size={20} />
+                        </div>
+
+                        <h4 className="text-white text-base font-semibold leading-snug">
+                          {item.title}
+                        </h4>
                       </div>
 
-                      <div>
-                        <h4 className="text-white font-semibold text-lg">
-                          {item.year}
-                        </h4>
-                        <p className="text-lime-400 text-sm">{item.title}</p>
-                      </div>
+                      {/* Date */}
+                      <span className="text-sm font-medium text-gray-400">
+                        {item.year}
+                      </span>
                     </div>
 
+                    {/* Description */}
                     <p className="text-gray-400 text-sm leading-relaxed">
                       {item.description}
                     </p>
                   </div>
 
-                  {/* Center Dot *
-                  <span className="absolute left-1/2 top-8 w-4 h-4 bg-lime-400 rounded-full -translate-x-1/2" />
-                </motion.div>
-              );
-            })}
-          </div>
-        </div> */}
-        {/* ---------- MILESTONE GRID ---------- */}
-        <div className="max-w-6xl mx-auto">
-          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-            {storyTimeline.map((item, idx) => {
-              const Icon = iconMap[item.icon];
-
-              return (
-                <motion.div
-                  key={item.year}
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{
-                    duration: 0.45,
-                    ease: "easeOut",
-                    delay: idx * 0.05,
-                  }}
-                  className="
-            relative
-            bg-black
-            border border-white/10
-            rounded-2xl
-            p-8
-            hover:border-lime-400/40
-            transition-colors
-          "
-                >
-                  {/* Icon */}
-                  <div className="mb-6">
-                    <div
-                      className="
-              w-14 h-14
-              rounded-xl
-              border border-lime-400/40
-              flex items-center justify-center
-              text-lime-400
-              bg-lime-400/5
-            "
-                    >
-                      <Icon size={26} />
-                    </div>
-                  </div>
-
-                  {/* Year */}
-                  <h4 className="text-white font-semibold text-lg">
-                    {item.year}
-                  </h4>
-
-                  {/* Title */}
-                  <p className="text-lime-400 text-sm mt-1 font-medium">
-                    {item.title}
-                  </p>
-
-                  {/* Description */}
-                  <p className="text-gray-400 text-sm mt-4 leading-relaxed">
-                    {item.description}
-                  </p>
+                  {/* Connector dot */}
+                  <span
+                    className={`
+              absolute
+              left-1/2
+              w-3.5 h-3.5
+              bg-lime-400
+              rounded-full
+              -translate-x-1/2
+            `}
+                    style={{
+                      top: "32px",
+                    }}
+                  />
                 </motion.div>
               );
             })}
