@@ -14,7 +14,7 @@ export default function MiddleVideo() {
           rounded-xl border border-lime-400/40
           hover:shadow-[0_0_50px_-10px_rgba(163,255,102,0.4)]
           overflow-hidden shadow-lg p-1"
-          //autoPlay
+          autoPlay
           muted
           loop
           playsInline
