@@ -23,18 +23,24 @@ export default function FounderSection() {
           className="relative rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-6 sm:p-8 md:p-12"
         >
           <div className="grid grid-cols-1 md:grid-cols-[1.2fr_2fr] gap-8 md:gap-12 items-stretch">
+            <div className="flex flex-col items-center gap-3">
+              {/* ---------- IMAGE ---------- */}
+              <div className="relative overflow-hidden rounded-xl h-full w-full">
+                <img
+                  src="/image/founder.jpg"
+                  alt="Founder portrait"
+                  className="w-full h-full object-cover grayscale"
+                  loading="lazy"
+                />
 
-            {/* ---------- IMAGE ---------- */}
-            <div className="relative overflow-hidden rounded-xl h-full">
-              <img
-                src="/image/founder.jpg"
-                alt="Founder portrait"
-                className="w-full h-full object-cover grayscale"
-                loading="lazy"
-              />
+                {/* subtle vignette */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+              </div>
 
-              {/* subtle vignette */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+              {/* ---------- NAME ---------- */}
+              <p className="text-xl font-semibold tracking-wide text-gray-300">
+                Sharath Thirunagaru
+              </p>
             </div>
 
             {/* ---------- TEXT ---------- */}

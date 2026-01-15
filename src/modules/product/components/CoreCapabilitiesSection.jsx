@@ -119,8 +119,14 @@ const CORE_CAPABILITIES = [
 /* ICONS */
 /* ------------------------------------------------------------------ */
 
-function CapabilityIcon({ type }) {
-  const base = "h-10 w-10 text-white";
+function CapabilityIcon({ type, size = "md" }) {
+  const sizeMap = {
+    sm: "h-4 w-4",
+    md: "h-5 w-5",
+    lg: "h-7 w-7",
+  };
+
+  const base = `${sizeMap[size]} text-white`;
 
   // Standard props for all SVGs
   const commonProps = {
@@ -220,7 +226,13 @@ export default function CoreCapabilitiesSection() {
 
   return (
     <section className="bg-black px-6 py-32">
-      <div className="mx-auto max-w-6xl text-center">
+      <motion.div
+        className="mx-auto max-w-6xl text-center"
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
         {/* Heading */}
         <h2 className="text-4xl md:text-5xl font-semibold text-white">
           Core Capabilities
@@ -234,24 +246,26 @@ export default function CoreCapabilitiesSection() {
           {CORE_CAPABILITIES.map((cap) => {
             const isActive = cap.id === activeId;
             return (
-              <button
+              <motion.button
                 key={cap.id}
                 onClick={() => setActiveId(cap.id)}
-                className={`flex items-center gap-2 rounded-xl px-4 py-2 text-sm transition border
+                whileHover={{ y: -2 }}
+                transition={{ duration: 0.12, ease: "easeOut" }}
+                className={`flex items-center gap-2 rounded-xl px-4 py-2 text-sm border transition
                   ${
                     isActive
-                      ? "bg-lime-400/10 text-lime-400 border-lime-400 font-medium text-lg"
-                      : "bg-white/5  text-gray-600 border-transparent hover:text-gray-200 font-medium"
+                      ? "bg-lime-400/10 text-lime-400 border-lime-400 font-medium"
+                      : "bg-white/5 text-gray-500 border-transparent hover:text-gray-200"
                   }
                 `}
               >
                 <div
                   className={`h-6 w-6 rounded-md ${cap.iconBg} flex items-center justify-center`}
                 >
-                  <CapabilityIcon type={cap.icon} />
+                  <CapabilityIcon type={cap.icon} size="sm" />
                 </div>
                 {cap.label}
-              </button>
+              </motion.button>
             );
           })}
         </div>
@@ -265,14 +279,14 @@ export default function CoreCapabilitiesSection() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -24 }}
               transition={{ duration: 0.25, ease: "easeOut" }}
-              className="mx-auto max-w-5xl rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-10 text-left backdrop-blur"
+              className="mx-auto max-w-5xl rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-10 text-left"
             >
               {/* Header */}
               <div className="flex items-start gap-6">
                 <div
                   className={`h-14 w-14 rounded-2xl ${active.iconBg} flex items-center justify-center shrink-0`}
                 >
-                  <CapabilityIcon type={active.icon} />
+                  <CapabilityIcon type={active.icon} size="lg" />
                 </div>
 
                 <div className="flex-1">
@@ -307,7 +321,7 @@ export default function CoreCapabilitiesSection() {
             </motion.div>
           </AnimatePresence>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

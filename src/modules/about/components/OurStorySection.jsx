@@ -62,16 +62,28 @@ export default function OurStorySection() {
       <MaxWrapper>
         {/* ---------- HEADER ---------- */}
         <div className="text-center mb-20 space-y-6 max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-semibold text-white">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white"
+          >
             Our Story
-          </h2>
+          </motion.h2>
 
-          <p className="text-gray-300 text-lg leading-relaxed">
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
+            viewport={{ once: true }}
+            className="text-gray-300 text-lg leading-relaxed"
+          >
             Founded in 2019, our journey began with a clear focus: applying
             advanced AI and data science to real-world business challenges. Over
             the years, we evolved from custom analytical systems to
             enterprise-grade AI platforms and generative AI solutions.
-          </p>
+          </motion.p>
         </div>
         {/* ---------- TIMELINE (Dashboard Style – Fixed) ---------- */}
         <div className="relative max-w-6xl mx-auto py-24">

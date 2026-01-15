@@ -1,7 +1,10 @@
 import React from "react";
-import { CirclePlay } from "lucide-react";
+import { ArrowRight, CirclePlay } from "lucide-react";
 import { Link } from "react-router-dom";
 import Section from "../../../components/layout/Section";
+import { motion } from "framer-motion";
+
+const MotionLink = motion(Link);
 
 export default function HeroSectionVideo() {
   return (
@@ -28,16 +31,35 @@ export default function HeroSectionVideo() {
           </div>
 
           {/* CTA */}
-          <div className="absolute inset-0 flex items-end justify-center pb-6 sm:pb-10 pointer-events-none">
-            <Link
+          <div className="absolute inset-0 flex items-end justify-center pb-6 sm:pb-10">
+            <MotionLink
               to="/contact"
-              className="pointer-events-auto flex items-center gap-2
-                         bg-lime-400 hover:bg-lime-500 text-black font-semibold
-                         px-6 sm:px-8 py-3 rounded-xl transition shadow-lg"
+              className="
+        inline-flex items-center gap-3
+        rounded-xl
+        bg-lime-400
+        px-7 py-3
+        text-black font-medium
+        hover:bg-lime-500
+        focus:outline-none focus-visible:ring-2 focus-visible:ring-lime-400
+      "
+              whileHover="hover"
+              whileFocus="hover"
             >
-              <CirclePlay size={20} />
-              Request a Demo
-            </Link>
+              <span>Request a Demo</span>
+
+              <motion.span
+                variants={{
+                  hover: { x: 6 },
+                }}
+                transition={{
+                  duration: 0.15,
+                  ease: "easeOut",
+                }}
+              >
+                <ArrowRight size={18} />
+              </motion.span>
+            </MotionLink>
           </div>
         </div>
       </div>
